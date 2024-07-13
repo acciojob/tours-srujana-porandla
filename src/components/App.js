@@ -55,21 +55,29 @@ const App = () => {
     const updatedTours=tours.filter(tour=>tour.id!==id);
     setTours(updatedTours);
   }
-  if(loading){
-    return <Loading />
-  }
-  if(tours.length==0){
+  if (loading) {
     return (
-      <div className="empty">
-        <h2>No tours left</h2>
-        <button className="refresh-btn" onClick={() => window.location.reload()}>Refresh</button>
+      <div id="main">
+        <Loading />
       </div>
     );
   }
+
+  if (tours.length === 0) {
+    return (
+      <div id="main">
+        <div className="title">
+          <h2>No tours left</h2>
+          <button className="btn" onClick={() => window.location.reload()}>Refresh</button>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <main>
+    <div id="main">
       <Tours tours={tours} removeTour={removeTour} />
-    </main>
+    </div>
   );
 };
 export default App;
