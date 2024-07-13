@@ -65,13 +65,17 @@ const App = () => {
 
   if (tours.length === 0) {
     return (
-      <div id="main">
-        <div className="title">
+      <main>
+        <div id="main">
+         <div className="title">
           <h2>No tours left</h2>
-          <button className="btn" onClick={() => window.location.reload()}>Refresh</button>
+          <button className="btn" onClick={() => setTours(tourData)}>Refresh</button>
+         </div>
         </div>
-      </div>
-    );
+    
+      </main>
+    ); 
+      
   }
 
   return (
