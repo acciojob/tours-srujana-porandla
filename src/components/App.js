@@ -52,7 +52,7 @@ const App = () => {
   },[]);
   
   const removeTour=(id)=>{
-    const updatedTours=tours.filter(tour=>tour.id!==id);
+    const updatedTours=tours.filter((tour)=>tour.id!==id);
     setTours(updatedTours);
   }
   if (loading) {
