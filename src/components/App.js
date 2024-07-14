@@ -80,7 +80,7 @@ const App = () => {
 
   return (
     <div id="main">
-      <Tours tours={tours} removeTour={handleDelete} />
+      <Tours tours={tours} handleDelete={handleDelete} />
     </div>
   );
 };
