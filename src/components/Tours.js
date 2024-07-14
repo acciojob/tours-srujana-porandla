@@ -10,7 +10,7 @@ const Tours = ({ tours, handleDelete }) => {
       </div>
       <div>
         {tours.map(tour => (
-          <Tour key={tour.id} {...tour} removeTour={handleDelete} />
+          <Tour key={tour.id} {...tour} handleDelete={handleDelete} />
         ))}
       </div>
     </section>
