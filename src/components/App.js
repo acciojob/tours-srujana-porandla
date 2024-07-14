@@ -51,7 +51,7 @@ const App = () => {
     },1000);
   },[]);
   
-  const removeTour=(id)=>{
+  const handleDelete=(id)=>{
     const updatedTours=tours.filter((tour)=>tour.id!==id);
     setTours(updatedTours);
   }
@@ -80,7 +80,7 @@ const App = () => {
 
   return (
     <div id="main">
-      <Tours tours={tours} removeTour={removeTour} />
+      <Tours tours={tours} removeTour={handleDelete} />
     </div>
   );
 };
